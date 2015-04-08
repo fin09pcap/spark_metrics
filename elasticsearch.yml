@@ -1,0 +1,7 @@
+cluster:
+  name: docker-elasticsearch-personal
+node:
+  name: docker-elasticsearch-dev
+path:
+  logs: /data/logs
+  data: /data/data
