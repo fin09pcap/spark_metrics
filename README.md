@@ -11,8 +11,8 @@ docker pull elasticsearch
 docker pull logstash
 ```
 The resources for the Docker Libary can be found below:
-* [https://github.com/docker-library/docs/tree/master/logstash](Logstash)
-* [https://github.com/docker-library/docs/tree/master/elasticsearch](ElasticSearch)
+* [Logstash](https://github.com/docker-library/docs/tree/master/logstash)
+* [ElasticSearch](https://github.com/docker-library/docs/tree/master/elasticsearch)
 
 Within the directory contains an example of the _metrics.properties_ for a
 Spark configuration. This is simply an example and should be modified to meet
