@@ -53,8 +53,8 @@ Ensure the configuration has `http.cors.enabled=true` and allows for the respect
 origins.
 
 ## Kibana 4
-An alternative method to download the existing Kibana 4 and following the
-instructions provided and point it to the repestive ElasticSearch container.
+An alternative method is to download the existing Kibana 4 and following the
+instructions provided and to point to the respective ElasticSearch container.
 
 * Download [Kibana4](https://www.elastic.co/downloads/kibana)
 * Configure the `elasticsearch_url` to point to the correct ElasticSearch instance or
