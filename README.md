@@ -42,13 +42,23 @@ logstash:latest logstash -f /data/spark.conf web
 ### ElasticSearch Container
 The configuration file, _elasticsearch.yml_ is the configuration file that is passed
 to the container to run a specific configuration for ElasticSearch. This can be
-modified based on the syntax from [www.elastic.co][Elastic].
+modified based on the syntax from [Elastic](www.elastic.co)
 
 The ElasticSearch container can be run via the command below:
 ```
 docker run -d --name elasticseaerch -p 9200:9200 -p 9300:9300  -v "${PWD}/data":/data
 elasticsearch:latest -Des.config=/data/elasticsearch.yml
 ```
+Ensure the configuration has `http.cors.enabled=true` and allows for the respective
+origins.
+
+## Kibana 4
+An alternative method to download the existing Kibana 4 and following the
+instructions provided and point it to the repestive ElasticSearch container.
+
+* Download [Kibana4](https://www.elastic.co/downloads/kibana)
+* Configure the `elasticsearch_url` to point to the correct ElasticSearch instance or
+    url.
 
 The input of the metrics can be simulated by simply running a _spark-shell_ or
 _spark-submit_ once the containers are running. The _spark-shell_ should
